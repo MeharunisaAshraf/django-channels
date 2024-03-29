@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Example</title>
+</head>
+<body>
+    <h1>WebSocket Example</h1>
+
+    <script>
+        var socket = new WebSocket('ws://your-domain.com/ws/mywebsocket/');
+
+        socket.onopen = function () {
+            console.log('WebSocket connection established.');
+        };
+
+        socket.onmessage = function (e) {
+            console.log('Message received:', e.data);
+        };
+
+        socket.onclose = function () {
+            console.log('WebSocket connection closed.');
+        };
+    </script>
+</body>
+</html>
